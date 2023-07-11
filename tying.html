@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing-Test</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: cursive;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(70deg,#00ffff,#ababab);
+        position: relative;
+        
+    }
+    h1{
+        font-size: 3.5rem;
+        text-transform: capitalize;
+        margin: 2rem 0;
+        text-align: center;
+        color: #645CBB;
+        outline: #363b38;
+        font-family: cursive;
+
+    }
+    .typing_section{
+        text-align: center;
+    }
+    #textarea{
+        border: 0.7rem solid #ababab;
+        border-radius: 10%;
+        max-width: 50rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+#btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    background-color: #363b38;
+    font-size: 2rem;
+    font-family: cursive;
+    border-radius: 10%;
+    color: aquamarine;
+}
+#showsentences,#score{
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    letter-spacing: .02rem;
+    text-align: center;
+    
+}
+.timer-div{
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+    /* bottom: 70px;
+    left: 12px; */
+    top: 15%;
+    left: 65%;
+
+
+}
+#show-time{
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    border: .5rem solid #645CBB;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1.5rem;
+
+}
+@media (max-width:520px) {
+    html{
+        font-size: 40%;
+    }
+    h1{
+        flex-direction: column;
+        font-size: 1.rem;
+        margin: 1rem 0 ;
+
+    }
+    .timer-div{
+   
+    top: 5%;
+    left: 45%;
+    
+}
+}
+    
+</style>
+<body>
+    <section class="main-body">
+        <h1>Typing Speed Test</h1>
+        <div class="timer-div">
+            <p id="show-time"></p>
+        </div>
+        <p id="showsentences"></p>
+    <div class="typing_section">
+<label for="textarea"></label>
+<textarea name="textarea" id="textarea" cols="55" rows="15" disabled></textarea>
+ <br>
+ <button id="btn">Start</button>
+    </div>
+    <p id="score"></p>
+    </section>
+    <script src="./typing.js"></script>
+</body>
+</html>
